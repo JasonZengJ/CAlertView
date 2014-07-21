@@ -51,9 +51,11 @@
 - (void)showAlertView
 {
     CAlertView *alertlertView = [[CAlertView alloc] initWithTitle:@"Alert" cancelButtonTitle:@"cancel" otherButtonTitles:@"comfirm", nil];
+    
+    
     UIView *contentView    = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth - 60, 100)];
     UIImageView *backgroundImageView = [[UIImageView alloc] initWithFrame:contentView.frame];
-    backgroundImageView.image = [UIImage imageNamed:@"bg1"];
+    backgroundImageView.image = [UIImage imageNamed:@"bg2"];
     UILabel *label  = [[UILabel alloc] initWithFrame:contentView.frame];
     label.text      = @"create what you like ：)";
     label.textColor = [UIColor whiteColor];

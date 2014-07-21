@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		96521691197D5B0600BB84FC /* bg1.png in Resources */ = {isa = PBXBuildFile; fileRef = 96521690197D5B0600BB84FC /* bg1.png */; };
+		96521693197D7C1100BB84FC /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 96521692197D7C1100BB84FC /* bg2.png */; };
 		96C2234D197D4CD7001BD80A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C2234C197D4CD7001BD80A /* Foundation.framework */; };
 		96C2234F197D4CD7001BD80A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C2234E197D4CD7001BD80A /* CoreGraphics.framework */; };
 		96C22351197D4CD7001BD80A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C22350197D4CD7001BD80A /* UIKit.framework */; };
@@ -35,7 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		96521690197D5B0600BB84FC /* bg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg1.png; sourceTree = "<group>"; };
+		96521692197D7C1100BB84FC /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg2.png; sourceTree = "<group>"; };
 		96C22349197D4CD7001BD80A /* CustomAlertView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomAlertView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96C2234C197D4CD7001BD80A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		96C2234E197D4CD7001BD80A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -115,7 +115,7 @@
 		96C22352197D4CD7001BD80A /* CustomAlertView */ = {
 			isa = PBXGroup;
 			children = (
-				96521690197D5B0600BB84FC /* bg1.png */,
+				96521692197D7C1100BB84FC /* bg2.png */,
 				96C2235B197D4CD7001BD80A /* AppDelegate.h */,
 				96C2235C197D4CD7001BD80A /* AppDelegate.m */,
 				96C2235E197D4CD7001BD80A /* Images.xcassets */,
@@ -232,7 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96521691197D5B0600BB84FC /* bg1.png in Resources */,
+				96521693197D7C1100BB84FC /* bg2.png in Resources */,
 				96C22357197D4CD7001BD80A /* InfoPlist.strings in Resources */,
 				96C2235F197D4CD7001BD80A /* Images.xcassets in Resources */,
 			);

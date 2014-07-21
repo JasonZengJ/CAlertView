@@ -46,15 +46,15 @@ The same as UIAlertView.
 
 ###5、The whole code snippet
 <pre>
-    CAlertView *alertlertView = [[CAlertView alloc] initWithTitle:@"Alert" cancelButtonTitle:@"cancel" otherButtonTitles:@"comfirm", nil];
+    CAlertView *alertView = [[CAlertView alloc] initWithTitle:@"Alert" cancelButtonTitle:@"cancel" otherButtonTitles:@"comfirm", nil];
    
     UIView *contentView    = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 260, 100)];
  
  	// your code.
  
-    alertlertView.delegate = self;
-    alertlertView.contentView = contentView;
-    [alertlertView show];
+    alertView.delegate = self;
+    alertView.contentView = contentView;
+    [alertView show];
 </pre>
 
 

@@ -1,6 +1,6 @@
 Introduction
 ================================
-I made this `CAlertView` for replace the maddening `UIAlertView` in some cases which we need to customize the content of the AlertView.Because `UIAlertView` can't be customized ,and the style of `UIAlertView` in ios 6 and ios 7 is different while we want it to be the same.This customized `CAlertView` can solve the two problems.
+I made this `CAlertView`,**Customized AlertView** ( The whole name looks too low and too long,so I use the capital letter of ' **Customized** ' : p  ), for replace the maddening `UIAlertView` in some cases which we need to customize the content of the AlertView.Because `UIAlertView` can't be customized ,and the style of `UIAlertView` in ios 6 and ios 7 is different while we want it to be the same.This customized `CAlertView` can solve the two problems.
 
 <h4><font color="red">Note: It's only for the portrait direction.If you need it to match the other directions,you can implement it yourself and welcome the contribution to complete the CAlertView ：）</font><h4>
 

@@ -13,7 +13,7 @@ The CAlertView Creation is familiar with UIAlertView,just alloc and then invocat
     CAlertView *alertView = [[CAlertView alloc] initWithTitle:@"Alert" cancelButtonTitle:@"cancel" otherButtonTitles:@"comfirm", nil];
 </pre>
 ###2、Set customized content view
-You should create a contentView your self,or the contentView will be created default.
+You should create a contentView yourself,or the contentView will be created default.
 <pre>
 	UIView *contentView   = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 260, 100)];
 	

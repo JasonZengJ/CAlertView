@@ -17,7 +17,7 @@
 
 @interface CAlertView : UIView
 
-@property(nonatomic,strong)id<CAlertViewDelegate> delegate;
+@property(nonatomic,weak)id<CAlertViewDelegate> delegate;
 @property(nonatomic,strong)UILabel *titleLabel;
 @property(nonatomic,strong)UIView  *contentView;
 @property(nonatomic)NSInteger tag;

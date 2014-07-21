@@ -8,7 +8,7 @@ I made this `CAlertView` for replace the maddening `UIAlertView` in some cases w
 How to use
 ================================
 ###1、Create CAlertView
-The CAlertView Creation is familiar with UIAlertView,just alloc and then invocate init method:** - (id)initWithTitle:(NSString \*)title cancelButtonTitle:(NSString \*)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ... **.The only difference is that you don't neet to pass content message,because the content view is customized completely by you.
+The CAlertView Creation is familiar with UIAlertView,just alloc and then invocate init method:** - (id)initWithTitle:(NSString \*)title cancelButtonTitle:(NSString \*)cancelButtonTitle otherButtonTitles:(NSString \*)otherButtonTitles, ... **.The only difference is that you don't neet to pass content message,because the content view is customized completely by you.
 <pre>
     CAlertView *alertView = [[CAlertView alloc] initWithTitle:@"Alert" cancelButtonTitle:@"cancel" otherButtonTitles:@"comfirm", nil];
 </pre>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96521691197D5B0600BB84FC /* bg1.png in Resources */ = {isa = PBXBuildFile; fileRef = 96521690197D5B0600BB84FC /* bg1.png */; };
 		96C2234D197D4CD7001BD80A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C2234C197D4CD7001BD80A /* Foundation.framework */; };
 		96C2234F197D4CD7001BD80A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C2234E197D4CD7001BD80A /* CoreGraphics.framework */; };
 		96C22351197D4CD7001BD80A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C22350197D4CD7001BD80A /* UIKit.framework */; };
@@ -19,6 +20,8 @@
 		96C22368197D4CD7001BD80A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C22350197D4CD7001BD80A /* UIKit.framework */; };
 		96C22370197D4CD7001BD80A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96C2236E197D4CD7001BD80A /* InfoPlist.strings */; };
 		96C22372197D4CD7001BD80A /* CustomAlertViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C22371197D4CD7001BD80A /* CustomAlertViewTests.m */; };
+		96C2237D197D4CF1001BD80A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C2237C197D4CF1001BD80A /* ViewController.m */; };
+		96C22386197D506D001BD80A /* CAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C22385197D506D001BD80A /* CAlertView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		96521690197D5B0600BB84FC /* bg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg1.png; sourceTree = "<group>"; };
 		96C22349197D4CD7001BD80A /* CustomAlertView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomAlertView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96C2234C197D4CD7001BD80A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		96C2234E197D4CD7001BD80A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -48,6 +52,10 @@
 		96C2236D197D4CD7001BD80A /* CustomAlertViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CustomAlertViewTests-Info.plist"; sourceTree = "<group>"; };
 		96C2236F197D4CD7001BD80A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		96C22371197D4CD7001BD80A /* CustomAlertViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomAlertViewTests.m; sourceTree = "<group>"; };
+		96C2237B197D4CF1001BD80A /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		96C2237C197D4CF1001BD80A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		96C22384197D506D001BD80A /* CAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAlertView.h; sourceTree = "<group>"; };
+		96C22385197D506D001BD80A /* CAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAlertView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +115,15 @@
 		96C22352197D4CD7001BD80A /* CustomAlertView */ = {
 			isa = PBXGroup;
 			children = (
+				96521690197D5B0600BB84FC /* bg1.png */,
 				96C2235B197D4CD7001BD80A /* AppDelegate.h */,
 				96C2235C197D4CD7001BD80A /* AppDelegate.m */,
 				96C2235E197D4CD7001BD80A /* Images.xcassets */,
 				96C22353197D4CD7001BD80A /* Supporting Files */,
+				96C2237B197D4CF1001BD80A /* ViewController.h */,
+				96C2237C197D4CF1001BD80A /* ViewController.m */,
+				96C22384197D506D001BD80A /* CAlertView.h */,
+				96C22385197D506D001BD80A /* CAlertView.m */,
 			);
 			path = CustomAlertView;
 			sourceTree = "<group>";
@@ -219,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96521691197D5B0600BB84FC /* bg1.png in Resources */,
 				96C22357197D4CD7001BD80A /* InfoPlist.strings in Resources */,
 				96C2235F197D4CD7001BD80A /* Images.xcassets in Resources */,
 			);
@@ -239,7 +253,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96C2237D197D4CF1001BD80A /* ViewController.m in Sources */,
 				96C2235D197D4CD7001BD80A /* AppDelegate.m in Sources */,
+				96C22386197D506D001BD80A /* CAlertView.m in Sources */,
 				96C22359197D4CD7001BD80A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +453,7 @@
 				96C22377197D4CD7001BD80A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96C22378197D4CD7001BD80A /* Build configuration list for PBXNativeTarget "CustomAlertViewTests" */ = {
 			isa = XCConfigurationList;
@@ -445,6 +462,7 @@
 				96C2237A197D4CD7001BD80A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

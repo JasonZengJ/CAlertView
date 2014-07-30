@@ -131,12 +131,28 @@ const static CGFloat  bottomViewHeight = 46.0;
         [button setTitle:[self.buttons objectAtIndex:i] forState:UIControlStateNormal];
         [button setTitleColor:[self colorWithHex:0x4FA4EC alpha:1.0 ] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(touchdownButton:)     forControlEvents:UIControlEventTouchDown];
+        [button addTarget:self action:@selector(dragOutOfButton:)     forControlEvents:UIControlEventTouchDragOutside];
+        [button addTarget:self action:@selector(dragInsideOfButton:)  forControlEvents:UIControlEventTouchDragInside];
         [button addTarget:self action:@selector(touchUpInsideButton:) forControlEvents:UIControlEventTouchUpInside];
         [self addLineToView:button withFrame:CGRectMake(buttonWidth - 0.5, 0, 0.5, bottomViewHeight)];
         [self.bottomView addSubview:button];
         
     }
     
+}
+
+- (void)dragOutOfButton:(UIButton *)button
+{
+    [UIView animateWithDuration:0.2 animations:^(){
+        button.backgroundColor = [UIColor clearColor];
+    }];
+}
+
+- (void)dragInsideOfButton:(UIButton *)button
+{
+    [UIView animateWithDuration:0.2 animations:^(){
+        button.backgroundColor = [self colorWithHex:0xeeeeee alpha:1.0];
+    }];
 }
 
 - (void)touchdownButton:(UIButton *)button

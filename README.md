@@ -66,11 +66,12 @@ demo
 
 ###hd demo1
 
-<img src="https://raw.githubusercontent.com/JasonZengJ/CAlertView/master/demo1.png">
+<img src="https://raw.githubusercontent.com/JasonZengJ/CAlertView/master/demo1.png" height="568">
 
 ###hd demo2
 
-<img src="https://raw.githubusercontent.com/JasonZengJ/CAlertView/master/demo2.png">
+<img src="https://raw.githubusercontent.com/JasonZengJ/CAlertView/master/demo2.png" height="568">
+
 
 
 

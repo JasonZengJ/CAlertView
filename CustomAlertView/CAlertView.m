@@ -20,7 +20,7 @@ const static CGFloat  bottomViewHeight = 46.0;
 @property(nonatomic,strong)UIView *headerView;
 @property(nonatomic,strong)UIView *bottomView;
 @property(nonatomic,strong)UIWindow *alertWindow;
-@property(nonatomic,strong)NSMutableArray *buttons;
+@property(nonatomic,strong)NSMutableArray *buttonsTitle;
 @property(nonatomic,strong)NSString *title;
 
 @end
@@ -43,19 +43,19 @@ const static CGFloat  bottomViewHeight = 46.0;
     self = [self initWithFrame:CGRectZero];
     if (self) {
         self.title = title;
-        NSMutableArray *buttons = [NSMutableArray array];
+        NSMutableArray *buttonsTitle = [NSMutableArray array];
         NSString *buttonTitle;
         va_list argumentList;
-        [buttons addObject:cancelButtonTitle];
+        [buttonsTitle addObject:cancelButtonTitle];
         if(otherButtonTitles){
-            [buttons addObject:otherButtonTitles];
+            [buttonsTitle addObject:otherButtonTitles];
             va_start(argumentList, otherButtonTitles);
             while((buttonTitle = va_arg(argumentList, id))){
-                [buttons addObject:buttonTitle];
+                [buttonsTitle addObject:buttonTitle];
             }
             va_end(argumentList);
         }
-        self.buttons = buttons;
+        self.buttonsTitle = buttonsTitle;
     }
     return self;
 }
@@ -99,10 +99,6 @@ const static CGFloat  bottomViewHeight = 46.0;
     self.bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, [self bottomOfView:self.contentView], contentViewWidth, bottomViewHeight)];
     [self addLineToView:self.bottomView withFrame:CGRectMake(0, 0, [self widthOfView:self.bottomView], 0.5)];
     
-    self.contentView.translatesAutoresizingMaskIntoConstraints = NO;
-    self.headerView.translatesAutoresizingMaskIntoConstraints  = NO;
-    self.bottomView.translatesAutoresizingMaskIntoConstraints  = NO;
-    
     CGFloat height = headerViewHeight + contentViewHeight + bottomViewHeight;
     UIView *dialogContainerView = [[UIView alloc] initWithFrame:CGRectMake((ScreenWidth - contentViewWidth) / 2, (ScreenHeight - height ) / 2 + 17, contentViewWidth, height)];
     dialogContainerView.alpha              = 0.9;
@@ -113,15 +109,7 @@ const static CGFloat  bottomViewHeight = 46.0;
     [dialogContainerView addSubview:self.contentView];
     [dialogContainerView addSubview:self.bottomView];
     
-    NSDictionary *viewsDic = @{@"headerView":self.headerView,@"contentView":self.contentView,@"bottomView":self.bottomView};
-    [self combinedViews:viewsDic ToDialogContainerView:dialogContainerView];
-     
     return dialogContainerView;
-}
-
-- (void)combinedViews:(NSDictionary *)viewsDic ToDialogContainerView:(UIView *)containerView
-{
-    
 }
 
 - (UIView *)createContentView
@@ -133,16 +121,16 @@ const static CGFloat  bottomViewHeight = 46.0;
 
 - (void)addButtonsToBottomView
 {
-    if (self.buttons == nil || self.buttons.count == 0) {
+    if (self.buttonsTitle == nil || self.buttonsTitle.count == 0) {
         return;
     }
-    CGFloat buttonWidth = [self widthOfView:self.bottomView] / self.buttons.count;
-    for (int i = 0 ; i < self.buttons.count ; i++) {
+    CGFloat buttonWidth = [self widthOfView:self.bottomView] / self.buttonsTitle.count;
+    for (int i = 0 ; i < self.buttonsTitle.count ; i++) {
         
         UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(buttonWidth * i, 0 , buttonWidth - 0.5, bottomViewHeight)];
         button.tag = i;
         button.titleLabel.font = [UIFont systemFontOfSize:15];
-        [button setTitle:[self.buttons objectAtIndex:i] forState:UIControlStateNormal];
+        [button setTitle:[self.buttonsTitle objectAtIndex:i] forState:UIControlStateNormal];
         [button setTitleColor:[self colorWithHex:0x4FA4EC alpha:1.0 ] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(touchdownButton:)     forControlEvents:UIControlEventTouchDown];
         [button addTarget:self action:@selector(dragOutOfButton:)     forControlEvents:UIControlEventTouchDragOutside];

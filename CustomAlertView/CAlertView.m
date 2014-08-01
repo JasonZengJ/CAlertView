@@ -87,27 +87,41 @@ const static CGFloat  bottomViewHeight = 46.0;
     CGFloat contentViewWidth  = [self widthOfView:self.contentView];
     CGFloat contentViewHeight = [self heightOfView:self.contentView];
     self.headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0,contentViewWidth, headerViewHeight)];
+    
     self.titleLabel = [[UILabel alloc] initWithFrame:self.headerView.frame];
     self.titleLabel.text            = self.title;
     self.titleLabel.textAlignment   = NSTextAlignmentCenter;
     self.titleLabel.backgroundColor = [UIColor clearColor];
+    
     [self.headerView addSubview:self.titleLabel];
     [self addLineToView:self.headerView withFrame:CGRectMake(0, [self heightOfView:self.headerView], [self widthOfView:self.headerView], 0.5)];
+    
     self.bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, [self bottomOfView:self.contentView], contentViewWidth, bottomViewHeight)];
-    self.bottomView.clipsToBounds = YES;
     [self addLineToView:self.bottomView withFrame:CGRectMake(0, 0, [self widthOfView:self.bottomView], 0.5)];
+    
+    self.contentView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.headerView.translatesAutoresizingMaskIntoConstraints  = NO;
+    self.bottomView.translatesAutoresizingMaskIntoConstraints  = NO;
     
     CGFloat height = headerViewHeight + contentViewHeight + bottomViewHeight;
     UIView *dialogContainerView = [[UIView alloc] initWithFrame:CGRectMake((ScreenWidth - contentViewWidth) / 2, (ScreenHeight - height ) / 2 + 17, contentViewWidth, height)];
-    dialogContainerView.backgroundColor = [UIColor whiteColor];
-    dialogContainerView.alpha = 0.9;
+    dialogContainerView.alpha              = 0.9;
+    dialogContainerView.clipsToBounds      = YES;
+    dialogContainerView.backgroundColor    = [UIColor whiteColor];
     dialogContainerView.layer.cornerRadius = 7;
-    dialogContainerView.clipsToBounds = YES;
     [dialogContainerView addSubview:self.headerView];
     [dialogContainerView addSubview:self.contentView];
     [dialogContainerView addSubview:self.bottomView];
     
+    NSDictionary *viewsDic = @{@"headerView":self.headerView,@"contentView":self.contentView,@"bottomView":self.bottomView};
+    [self combinedViews:viewsDic ToDialogContainerView:dialogContainerView];
+     
     return dialogContainerView;
+}
+
+- (void)combinedViews:(NSDictionary *)viewsDic ToDialogContainerView:(UIView *)containerView
+{
+    
 }
 
 - (UIView *)createContentView
@@ -193,22 +207,25 @@ const static CGFloat  bottomViewHeight = 46.0;
     popInAnimation.delegate = self.dialogContainerView;
     
     [viewLayer addAnimation:popInAnimation forKey:@"transform.scale"];
+    
+    __weak CAlertView *alertView = self;
     [UIView animateWithDuration:0.2555 animations:^(){
-        self.backgroundColor = [self colorWithHex:0x000000 alpha:0.5];
+        alertView.backgroundColor = [self colorWithHex:0x000000 alpha:0.5];
     }];
     
 }
 
 - (void)popOutAnimation
 {
+    __weak CAlertView *alertView = self;
     [UIView animateWithDuration:0.3 animations:^(){
-        self.dialogContainerView.transform = CGAffineTransformMakeScale(0.8, 0.8);
-        self.dialogContainerView.alpha = 0;
+        alertView.dialogContainerView.transform = CGAffineTransformMakeScale(0.8, 0.8);
+        alertView.dialogContainerView.alpha = 0;
     } completion:^(BOOL finished){
-        self.alertWindow = nil;
+        alertView.alertWindow = nil;
     }];
     [UIView animateWithDuration:0.2 animations:^(){
-        self.backgroundColor = [self colorWithHex:0x000000 alpha:0.0];
+        alertView.backgroundColor = [alertView colorWithHex:0x000000 alpha:0.0];
     }];
 }
 

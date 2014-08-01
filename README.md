@@ -60,4 +60,19 @@ The same as UIAlertView.
 
 demo
 ================================
+
+###GIF
 <img src="https://raw.githubusercontent.com/JasonZengJ/CAlertView/master/demo.gif">
+
+###hd demo1
+
+<img src="https://raw.githubusercontent.com/JasonZengJ/CAlertView/master/demo1.png">
+
+###hd demo2
+
+<img src="https://raw.githubusercontent.com/JasonZengJ/CAlertView/master/demo2.png">
+
+
+
+
+

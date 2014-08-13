@@ -52,7 +52,6 @@
 {
     CAlertView *alertlertView = [[CAlertView alloc] initWithTitle:@"Alert" cancelButtonTitle:@"cancel" otherButtonTitles:@"comfirm", nil];
     
-    UIAlertView;
     UIView *contentView    = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth - 60, 100)];
     UIImageView *backgroundImageView = [[UIImageView alloc] initWithFrame:contentView.frame];
     backgroundImageView.image = [UIImage imageNamed:@"bg2"];
